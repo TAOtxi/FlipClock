@@ -1,0 +1,164 @@
+:root {
+    --clock-content: "00";
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(238, 238, 238);
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    bottom: 5%;
+    width: 56%;
+    height: auto;
+    aspect-ratio: 100 / 24;
+    display: flex;
+    gap: 6px;
+}
+
+.card {
+    text-align: center;
+    flex: 1;
+    height: 100%;
+}
+
+span {
+    text-align: center;
+    font-size: 2vw;
+}
+
+.flip {
+    position: relative;
+    height: 100%;
+    font-size: 9vw;
+    color: white;
+    font-weight: bold;
+}
+
+.flip div::before,
+.flip div::after {
+    position: absolute;
+    overflow: hidden;
+    content: "00";
+    right: 0;
+    left: 0;
+}
+
+.flip div::before {
+    top: 0;
+    bottom: 50%;
+    line-height: 1.45em;
+    border-radius: 0.2em 0.2em 0 0;
+    background-color: rgb(34, 34, 34);
+    border-bottom: 1px solid #000000;
+}
+
+.flip .front::before {
+    transform-origin: bottom;
+    z-index: 1;
+}
+
+.flipping .front::before {
+    backface-visibility: hidden;
+    transform: perspective(300px) rotateX(-180deg);
+    transition: 0.4s linear;
+}
+
+.flip div::after {
+    top: 50%;
+    bottom: 0;
+    line-height: 0;
+    border-radius: 0 0 0.2em 0.2em;
+    background-color: rgb(57, 57, 57);
+}
+
+.flip .back::after {
+    z-index: 1;
+    backface-visibility: hidden;
+    transform-origin: top;
+    transform: rotateX(180deg);
+}
+
+.flipping .back::after {
+    transform: perspective(300px) rotateX(0deg);
+    transition: 0.4s linear;
+}
+
+.flip .number-0::before, .flip .number-0::after {content: "00";}
+.flip .number-1::before, .flip .number-1::after {content: "01";}  
+.flip .number-2::before, .flip .number-2::after {content: "02";}  
+.flip .number-3::before, .flip .number-3::after {content: "03";}  
+.flip .number-4::before, .flip .number-4::after {content: "04";}  
+.flip .number-5::before, .flip .number-5::after {content: "05";}  
+.flip .number-6::before, .flip .number-6::after {content: "06";}  
+.flip .number-7::before, .flip .number-7::after {content: "07";}  
+.flip .number-8::before, .flip .number-8::after {content: "08";}  
+.flip .number-9::before, .flip .number-9::after {content: "09";}  
+.flip .number-10::before, .flip .number-10::after {content: "10";}
+.flip .number-11::before, .flip .number-11::after {content: "11";}
+.flip .number-12::before, .flip .number-12::after {content: "12";}
+.flip .number-13::before, .flip .number-13::after {content: "13";}
+.flip .number-14::before, .flip .number-14::after {content: "14";}
+.flip .number-15::before, .flip .number-15::after {content: "15";}
+.flip .number-16::before, .flip .number-16::after {content: "16";}
+.flip .number-17::before, .flip .number-17::after {content: "17";}
+.flip .number-18::before, .flip .number-18::after {content: "18";}
+.flip .number-19::before, .flip .number-19::after {content: "19";}
+.flip .number-20::before, .flip .number-20::after {content: "20";}
+.flip .number-21::before, .flip .number-21::after {content: "21";}
+.flip .number-22::before, .flip .number-22::after {content: "22";}
+.flip .number-23::before, .flip .number-23::after {content: "23";}
+.flip .number-24::before, .flip .number-24::after {content: "24";}
+.flip .number-25::before, .flip .number-25::after {content: "25";}
+.flip .number-26::before, .flip .number-26::after {content: "26";}
+.flip .number-27::before, .flip .number-27::after {content: "27";}
+.flip .number-28::before, .flip .number-28::after {content: "28";}
+.flip .number-29::before, .flip .number-29::after {content: "29";}
+.flip .number-30::before, .flip .number-30::after {content: "30";}
+.flip .number-31::before, .flip .number-31::after {content: "31";}
+.flip .number-32::before, .flip .number-32::after {content: "32";}
+.flip .number-33::before, .flip .number-33::after {content: "33";}
+.flip .number-34::before, .flip .number-34::after {content: "34";}
+.flip .number-35::before, .flip .number-35::after {content: "35";}
+.flip .number-36::before, .flip .number-36::after {content: "36";}
+.flip .number-37::before, .flip .number-37::after {content: "37";}
+.flip .number-38::before, .flip .number-38::after {content: "38";}
+.flip .number-39::before, .flip .number-39::after {content: "39";}
+.flip .number-40::before, .flip .number-40::after {content: "40";}
+.flip .number-41::before, .flip .number-41::after {content: "41";}
+.flip .number-42::before, .flip .number-42::after {content: "42";}
+.flip .number-43::before, .flip .number-43::after {content: "43";}
+.flip .number-44::before, .flip .number-44::after {content: "44";}
+.flip .number-45::before, .flip .number-45::after {content: "45";}
+.flip .number-46::before, .flip .number-46::after {content: "46";}
+.flip .number-47::before, .flip .number-47::after {content: "47";}
+.flip .number-48::before, .flip .number-48::after {content: "48";}
+.flip .number-49::before, .flip .number-49::after {content: "49";}
+.flip .number-49::before, .flip .number-49::after {content: "49";}
+.flip .number-49::before, .flip .number-49::after {content: "49";}
+.flip .number-49::before, .flip .number-49::after {content: "49";}
+.flip .number-49::before, .flip .number-49::after {content: "49";}
+.flip .number-49::before, .flip .number-49::after {content: "49";}
+.flip .number-49::before, .flip .number-49::after {content: "49";}
+.flip .number-50::before, .flip .number-50::after {content: "50";}
+.flip .number-49::before, .flip .number-49::after {content: "49";}
+.flip .number-49::before, .flip .number-49::after {content: "49";}
+.flip .number-50::before, .flip .number-50::after {content: "50";}
+.flip .number-51::before, .flip .number-51::after {content: "51";}
+.flip .number-52::before, .flip .number-52::after {content: "52";}
+.flip .number-53::before, .flip .number-53::after {content: "53";}
+.flip .number-54::before, .flip .number-54::after {content: "54";}
+.flip .number-55::before, .flip .number-55::after {content: "55";}
+.flip .number-56::before, .flip .number-56::after {content: "56";}
+.flip .number-57::before, .flip .number-57::after {content: "57";}
+.flip .number-58::before, .flip .number-58::after {content: "58";}
+.flip .number-59::before, .flip .number-59::after {content: "59";}
