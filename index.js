@@ -45,14 +45,9 @@ function run() {
 
     setTimeout(() => {
         reductionCard();
-
         updateNumber(second, s);
-        if (s === 0) {
-            updateNumber(minute, m);
-            
-            if (m === 0)
-                updateNumber(hour, h);
-        }
+        updateNumber(minute, m);
+        updateNumber(hour, h);
     }, 500);
 }
 
