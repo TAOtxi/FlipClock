@@ -1,3 +1,7 @@
+:root {
+    --clock-content: "00";
+}
+
 * {
     box-sizing: border-box;
 }
@@ -52,7 +56,7 @@ span {
 .flip div::before {
     top: 0;
     bottom: 50%;
-    line-height: 1.45em;
+    line-height: 1.49em;
     border-radius: 0.2em 0.2em 0 0;
     background-color: rgb(34, 34, 34);
     border-bottom: 1px solid #000000;
